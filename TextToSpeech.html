@@ -31,21 +31,21 @@
       }
 
       button {
+        margin: 5px;
         background-color: #4caf50;
         color: white;
         padding: 10px 20px;
         font-size: 16px;
-        border: none;
         cursor: pointer;
-        border-radius: 5px;
+        border-radius: 15px;
       }
 
       button:hover {
-        background-color: #45a049;
+        background-color: #16cd28;
       }
 
       button:active {
-        background-color: #3e8e41;
+        background-color: #3e528e;
       }
     </style>
   </head>
@@ -71,8 +71,8 @@
           const utterance = new SpeechSynthesisUtterance(textToSpeak);
 
           // Use the default voice (you can customize by fetching available voices)
-          // const voices = window.speechSynthesis.getVoices();
-          // utterance.voice = voices[0];
+          const voices = window.speechSynthesis.getVoices();
+          utterance.voice = voices[1];
 
           // Speak the text
           window.speechSynthesis.speak(utterance);
